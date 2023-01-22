@@ -1,0 +1,23 @@
+.mouseFollower {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  z-index: 20000;
+  color: white;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  pointer-events: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .mouse-follower {
+    display: none;
+  }
+}
