@@ -1,15 +1,23 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../../utils/styles/flex.scss';
-import NavStyle from './Navbar.module.scss';
-import './Menu.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { slide as Menu } from 'react-burger-menu';
 
+import '../../utils/styles/flex.scss';
+import NavStyle from './Navbar.module.scss';
+import './Menu.scss';
+
 export const Navbar = () => {
   const [isHambugerMenuOpen, setIsHambugerMenuOpen] = React.useState(false);
 
+  const handleIsOpen = () => {
+    setIsHambugerMenuOpen(!isHambugerMenuOpen);
+  };
+
+  const closeSideBar = () => {
+    setIsHambugerMenuOpen(false);
+  };
   return (
     <nav className={NavStyle.nav}>
       <div className={NavStyle.navLogoContainer}>LOGO</div>
@@ -71,7 +79,12 @@ export const Navbar = () => {
         </div>
       </div>
       <div className={NavStyle.menuContainer}>
-        <Menu right isOpen={isHambugerMenuOpen}>
+        <Menu
+          right
+          isOpen={isHambugerMenuOpen}
+          onOpen={handleIsOpen}
+          onClose={handleIsOpen}
+        >
           <ul className={NavStyle.navList}>
             <li className={NavStyle.navListElement}>
               <NavLink
@@ -83,7 +96,7 @@ export const Navbar = () => {
                 data-interactable
                 data-text-popup="Go home!"
                 to="/"
-                onClick={() => setIsHambugerMenuOpen(false)}
+                onClick={closeSideBar}
               >
                 Home
               </NavLink>
@@ -98,7 +111,7 @@ export const Navbar = () => {
                 data-interactable
                 data-text-popup="Want my number?"
                 to="/contacts"
-                onClick={() => setIsHambugerMenuOpen(false)}
+                onClick={closeSideBar}
               >
                 Contacts
               </NavLink>
