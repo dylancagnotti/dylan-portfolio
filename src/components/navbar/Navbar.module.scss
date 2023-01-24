@@ -10,6 +10,11 @@
   grid-template-columns: 1fr 5fr;
   background-color: $def-secondary-color;
   color: black;
+  height: 64px;
+}
+
+.menuContainer {
+  display: none;
 }
 
 .navLinksContainer {
@@ -22,6 +27,10 @@
 .navLogoContainer {
   margin: 0px;
   padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .navList {
@@ -52,4 +61,75 @@
 
 .navlinkActive {
   color: $def-text-color-2;
+}
+
+.iconsContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10vmin;
+
+  & > :not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+
+.iconElement {
+  color: $def-text-color-2;
+  transition: 300ms;
+
+  &:hover {
+    color: $def-text-color;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navLinksContainer {
+    display: none;
+  }
+
+  .menuContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navList {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    margin-right: 5vmin;
+    flex-direction: column;
+  }
+
+  .navListElement {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+  }
+
+  .iconsContainer {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 10vmin;
+
+    & > :not(:last-child) {
+      margin-right: 1.5em;
+    }
+  }
+
+  .iconElement {
+    color: $def-text-color-2;
+    margin-bottom: 1.5em;
+    transition: 300ms;
+    &:hover {
+      color: $def-text-color;
+    }
+  }
 }

@@ -14,11 +14,12 @@
   pointer-events: none;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 0.7em;
+  line-height: 0.9em;
   overflow: hidden;
 }
 
 @media screen and (max-width: 1200px) {
-  .mouse-follower {
+  .mouseFollower {
     display: none;
   }
 }
