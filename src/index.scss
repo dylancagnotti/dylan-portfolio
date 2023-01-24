@@ -1,5 +1,4 @@
-$def-bg-color: #242424;
-$def-text-color: rgba(255, 255, 255, 0.87);
+@import 'Colors';
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -9,7 +8,7 @@ $def-text-color: rgba(255, 255, 255, 0.87);
 
   color-scheme: light dark;
   color: $def-text-color;
-  background-color: $def-bg-color;
+  background-color: $def-primary-color;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

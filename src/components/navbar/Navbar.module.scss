@@ -1,0 +1,55 @@
+@import '../../Colors';
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  background-color: $def-secondary-color;
+  color: black;
+}
+
+.navLinksContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $def-secondary-color;
+  color: black;
+}
+
+.navLogoContainer {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navList {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  margin-right: 5vmin;
+}
+
+.navListElement {
+  padding: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navlink {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  color: $def-neutral-color;
+}
+
+.navlinkActive {
+  color: $def-text-color-2;
+}
