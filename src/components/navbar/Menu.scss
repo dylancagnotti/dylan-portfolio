@@ -1,4 +1,4 @@
-@import '../../Colors.scss';
+@import '../../utils/styles/Colors.scss';
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute;
@@ -41,14 +41,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: $def-tertiary-color;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #373a47;
+  fill: $def-tertiary-color;
 }
 
 /* Wrapper for item list */
@@ -65,7 +65,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  top: 0px;
+  right: 0px;
 }
 
 @media screen and (max-width: 320px) {
