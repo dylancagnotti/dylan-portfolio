@@ -14,6 +14,7 @@ export const FloatingShapes = () => {
       <li></li>
       <li></li>
       <li></li>
+      <li></li>
     </ul>
   );
 };
