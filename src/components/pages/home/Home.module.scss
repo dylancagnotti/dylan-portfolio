@@ -1,0 +1,71 @@
+@import '../../../utils/styles/Colors.scss';
+@import '../../../utils/styles/Dimensions.scss';
+
+.homeWrapper {
+  width: 100vw;
+  height: calc(100vh - $def-navbar-height);
+}
+
+.homeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  align-items: center;
+  justify-items: flex-end;
+}
+
+.homeGridElement {
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+#presentation {
+  font-size: 1.3em;
+  line-height: 1.4em;
+  justify-self: flex-start;
+}
+
+.presentationContent {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+@media (max-width: $def-mobile-width) {
+  .homeGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: calc(200vh - $def-navbar-height);
+  }
+
+  .presentationContent {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 350px) {
+  #presentation {
+    font-size: 1em;
+    line-height: 1.1em;
+  }
+}
+@media (max-width: 300px) {
+  #presentation {
+    font-size: 0.9em;
+    line-height: 1em;
+  }
+}

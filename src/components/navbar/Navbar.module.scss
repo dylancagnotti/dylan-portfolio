@@ -1,4 +1,5 @@
-@import '../../Colors';
+@import '../../utils/styles/Colors.scss';
+@import '../../utils/styles/Dimensions.scss';
 
 .nav {
   position: absolute;
@@ -8,20 +9,9 @@
   padding: 0px;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  background-color: $def-secondary-color;
+  background-color: transparent;
   color: black;
-  height: 64px;
-}
-
-.menuContainer {
-  display: none;
-}
-
-.navLinksContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: $def-secondary-color;
-  color: black;
+  height: $def-navbar-height;
 }
 
 .navLogoContainer {
@@ -29,7 +19,7 @@
   padding: 0px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: white;
 }
 
@@ -55,12 +45,18 @@
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  border-color: transparent;
   color: $def-neutral-color;
+  padding: 4px;
 }
 
 .navlinkActive {
-  color: $def-text-color-2;
+  color: $def-text-color;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-color: $def-text-color;
+  border-bottom-left-radius: 3px;
 }
 
 .iconsContainer {
@@ -75,15 +71,28 @@
 }
 
 .iconElement {
-  color: $def-text-color-2;
+  color: $def-text-color;
   transition: 300ms;
 
   &:hover {
-    color: $def-text-color;
+    color: $def-text-color-2;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: calc($def-mobile-width + 1px)) {
+  .navLinksContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: transparent;
+    color: black;
+  }
+
+  .menuContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $def-mobile-width) {
   .navLinksContainer {
     display: none;
   }
@@ -125,11 +134,11 @@
   }
 
   .iconElement {
-    color: $def-text-color-2;
+    color: $def-text-color;
     margin-bottom: 1.5em;
     transition: 300ms;
     &:hover {
-      color: $def-text-color;
+      color: $def-text-color-2;
     }
   }
 }

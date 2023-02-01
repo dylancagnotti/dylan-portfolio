@@ -61,11 +61,14 @@ export const MouseTrail = () => {
     const x = event.clientX + mouseTrail.offsetWidth / 2;
     const y = event.clientY + mouseTrail.offsetHeight / 2;
 
+    const xTransp = event.clientX - mouseTrail.offsetWidth / 2;
+    const yTransp = event.clientY - mouseTrail.offsetHeight / 2;
+
     let frames: PropertyIndexedKeyframes = {
-      transform: `translate(${x}px, ${y}px)`,
+      transform: `translate(${xTransp}px, ${yTransp}px)`,
       width: '30px',
       height: '30px',
-      backgroundColor: `rgba(255,255,255,1)`,
+      backgroundColor: `rgba(255,255,255,0.1)`,
     };
 
     let txt = '';
