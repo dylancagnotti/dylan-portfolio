@@ -7,7 +7,7 @@ import { slide as Menu } from 'react-burger-menu';
 import '../../utils/styles/flex.scss';
 import NavStyle from './Navbar.module.scss';
 import './Menu.scss';
-import Logo from '../../assets/images/logo_only_d.svg';
+import Logo from '../../assets/images/logo.svg';
 
 export const Navbar = () => {
   const [isHambugerMenuOpen, setIsHambugerMenuOpen] = React.useState(false);
