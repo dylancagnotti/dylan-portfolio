@@ -1,3 +1,5 @@
+@import '../../utils/styles/Dimensions.scss';
+
 .mouseFollower {
   position: fixed;
   width: 20px;
@@ -18,7 +20,7 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: $def-mobile-width) {
   .mouseFollower {
     display: none;
   }

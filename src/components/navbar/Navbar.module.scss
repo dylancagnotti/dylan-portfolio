@@ -79,7 +79,7 @@
   }
 }
 
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: calc($def-mobile-width + 1px)) {
   .navLinksContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -92,7 +92,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: $def-mobile-width) {
   .navLinksContainer {
     display: none;
   }
