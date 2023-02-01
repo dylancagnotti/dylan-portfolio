@@ -7,7 +7,7 @@ const HomeTyperwriter = () => {
       onInit={(typewriter) => {
         typewriter
           .typeString('let ')
-          .typeString("<span style='color: white'>me</span>: {")
+          .typeString("<span style='color: white'>me</span> = {")
           .pauseFor(300)
           .changeDelay(45)
           .typeString('<br /> &nbsp;&nbsp; name: ')

@@ -2,9 +2,11 @@
 
 :root {
   font-family: 'Abel', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.5em;
   line-height: 24px;
   font-weight: 400;
+
+  overflow-x: hidden;
 
   color-scheme: light dark;
   color: $def-text-color;
