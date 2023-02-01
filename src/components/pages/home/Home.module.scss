@@ -1,5 +1,44 @@
 @import '../../../utils/styles/Colors.scss';
+@import '../../../utils/styles/Dimensions.scss';
 
 .homeWrapper {
   width: 100vw;
+  height: calc(100vh - $def-navbar-height);
+}
+
+.homeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  align-items: center;
+}
+
+.homeGridElement {
+  padding: 1rem;
+}
+
+#presentation {
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+
+@media (max-width: $def-mobile-width) {
+  .homeGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 350px) {
+  #presentation {
+    font-size: 1.2em;
+    line-height: 1.1em;
+  }
+}
+@media (max-width: 300px) {
+  #presentation {
+    font-size: 1.1em;
+    line-height: 1em;
+  }
 }
