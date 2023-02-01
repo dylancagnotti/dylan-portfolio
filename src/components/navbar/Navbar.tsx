@@ -7,6 +7,7 @@ import { slide as Menu } from 'react-burger-menu';
 import '../../utils/styles/flex.scss';
 import NavStyle from './Navbar.module.scss';
 import './Menu.scss';
+import Logo from '../../assets/images/logo_only_d.svg';
 
 export const Navbar = () => {
   const [isHambugerMenuOpen, setIsHambugerMenuOpen] = React.useState(false);
@@ -20,7 +21,9 @@ export const Navbar = () => {
   };
   return (
     <nav className={NavStyle.nav}>
-      <div className={NavStyle.navLogoContainer}>LOGO</div>
+      <div className={NavStyle.navLogoContainer}>
+        <img data-interactable data-text-popup="Great logo huh?" src={Logo} />
+      </div>
       <div className={NavStyle.navLinksContainer}>
         <ul className={NavStyle.navList}>
           <li className={NavStyle.navListElement}>
